@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using AdventureGame;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            TextGame game = new TextGame();
+            game.Run();
+        }
+    }   
+}
