@@ -1,2 +1,23 @@
-.vs/
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+
+*.csproj.user
+*.user
+*.suo
+*.cache
+*.pdb
+*.obj
+*.exe
+*.dll
+*.vs/
+.vscode/
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore .env files
 .env
