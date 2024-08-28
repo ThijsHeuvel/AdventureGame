@@ -37,9 +37,16 @@ namespace AdventureGame.Classes
             }
         }
 
-        internal static void WaitForInput()
+        internal static void WaitForInput(string? message = null)
         {
-            Console.WriteLine("Press any key to continue..");
+            if (message != null && message != "")
+            {
+                Console.WriteLine(message);
+            }
+            else
+            {
+                Console.WriteLine("Press any key to continue..");
+            }
             Console.ReadKey();
         }
     }
