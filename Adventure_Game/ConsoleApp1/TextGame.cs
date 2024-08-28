@@ -55,7 +55,7 @@ namespace AdventureGame
                         MainMenu();
                         break;
                     }
-                    Console.WriteLine("Save File Found!");
+                    LoadGame();
                     break;
                 default:
                     Helper.WaitForInput("Invalid Choice. Try again.");
@@ -72,13 +72,28 @@ namespace AdventureGame
             player.HintsLeft = 5;
             if (File.Exists($"{dirPath}\\save.txt"))
             {
-                File.Delete("save.txt");
+                File.Delete($"{dirPath}\\save.txt");
             }
 
             System.IO.StreamWriter file = new System.IO.StreamWriter("save.txt");
             file.WriteLine(player.CaseID + "\n" + player.HintsLeft);
             file.Close();
             Helper.WaitForInput();
+        }
+
+        private void LoadGame()
+        {
+            Console.Clear();
+            
+            if (!int.TryParse(Helper.GetSaveLine(1), out int caseID))
+            {
+                Console.WriteLine("Save File Invalid. Possibly corrupt?");
+                MainMenu();
+            }
+            player.CaseID = caseID;
+            Console.WriteLine(player.CaseID);
+            Console.ReadKey();
+
         }
     }
 }

@@ -49,5 +49,15 @@ namespace AdventureGame.Classes
             }
             Console.ReadKey();
         }
+
+        internal static string? GetSaveLine(int line)
+        {
+            using (var sr = new StreamReader("save.txt"))
+            {
+                for (int i = 1; i < line; i++)
+                    sr.ReadLine();
+                return sr.ReadLine();
+            }
+        }
     }
 }
