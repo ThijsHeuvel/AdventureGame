@@ -9,11 +9,12 @@
 *.obj
 *.exe
 *.dll
-*.vs/
+/Adventure_Game/.vs
 .vscode/
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
+*.vsidx
 
 # Ignore build outputs
 bin/

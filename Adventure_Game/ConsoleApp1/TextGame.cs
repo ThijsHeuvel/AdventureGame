@@ -11,7 +11,6 @@ namespace AdventureGame
         internal void Run() // Gets called when the program starts in Program.cs.
         {
             string dirPath = Environment.CurrentDirectory;
-            Console.WriteLine(dirPath);
 
             Console.WriteLine("Welcome to AdventureGame!");
             Console.WriteLine("1. New Game");

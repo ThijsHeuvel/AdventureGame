@@ -1,6 +1,6 @@
-﻿using AdventureGame;
+﻿
 
-namespace ConsoleApp1
+namespace AdventureGame
 {
     internal class Program
     {
