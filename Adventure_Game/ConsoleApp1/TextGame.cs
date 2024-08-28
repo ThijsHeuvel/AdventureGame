@@ -31,7 +31,18 @@ namespace AdventureGame
             switch (userInput)
             {
                 case "1":
+                    Console.Clear();
                     // Method for starting new game
+                    if (File.Exists($"{dirPath}\\save.txt"))
+                    {
+                        string answer = Helper.AskInput("WARNING!!\nIf you start a new game, your save file will be reset.\nAre you sure you want to continue?\n\n[Y/N]\n\n");
+                        answer = answer.ToLower();
+                        if (answer == "n")
+                        {
+                            Console.Clear();
+                            MainMenu();
+                        }
+                    }
                     break;
                 case "2":
                     // Method for loading a game IF ONE EXISTS.
