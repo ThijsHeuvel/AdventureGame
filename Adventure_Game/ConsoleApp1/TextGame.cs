@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using AdventureGame.Classes;
 
 namespace AdventureGame
 {
@@ -20,6 +21,7 @@ namespace AdventureGame
         {
             Console.WriteLine("Welcome to AdventureGame!");
             Console.WriteLine("1. New Game");
+
 
             if (File.Exists($"{dirPath}\\save.txt"))
             {
