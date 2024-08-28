@@ -11,6 +11,7 @@ namespace AdventureGame
     internal class TextGame
     {
         string? dirPath;
+        Player player = new Player();
         internal void Run() // Gets called when the program starts in Program.cs.
         {
             dirPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -43,6 +44,7 @@ namespace AdventureGame
                             MainMenu();
                         }
                     }
+                    NewGame();
                     break;
                 case "2":
                     // Method for loading a game IF ONE EXISTS.
@@ -61,6 +63,22 @@ namespace AdventureGame
                     MainMenu();
                     break;
             }
+        }
+
+        private void NewGame() // Creates/Replaces a new save file and saves the default player stats to it
+        {
+            Console.Clear();
+            player.CaseID = 1;
+            player.HintsLeft = 5;
+            if (File.Exists($"{dirPath}\\save.txt"))
+            {
+                File.Delete("save.txt");
+            }
+
+            System.IO.StreamWriter file = new System.IO.StreamWriter("save.txt");
+            file.WriteLine(player.CaseID + "\n" + player.HintsLeft);
+            file.Close();
+            Helper.WaitForInput();
         }
     }
 }
