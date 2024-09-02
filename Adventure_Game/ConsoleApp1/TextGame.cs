@@ -69,7 +69,7 @@ namespace AdventureGame
         {
             Console.Clear();
             player.CaseID = 1;
-            player.HintsLeft = 5;
+            player.HintsLeft = 2;
             if (File.Exists($"{dirPath}\\save.txt"))
             {
                 File.Delete($"{dirPath}\\save.txt");
