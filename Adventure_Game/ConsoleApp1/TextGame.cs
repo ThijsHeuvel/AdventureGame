@@ -74,7 +74,7 @@ namespace AdventureGame
         private void NewGame() // Creates/Replaces a new save file and saves the default player stats to it
         {
             Console.Clear();
-            player.CaseID = 1;
+            player.CaseID = 010;
             player.HintsLeft = 2;
             if (File.Exists($"{dirPath}\\save.txt"))
             {
