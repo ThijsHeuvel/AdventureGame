@@ -4,7 +4,7 @@
 - Alle variabelen, functies, klassen, etc. worden in het Engels geschreven.
 
 ## CamelCase
-- Alle variabelenworden geschreven in lowerCamelCase.
+- Alle variabelen worden geschreven in lowerCamelCase.
 - Alle klassen en functies worden geschreven in UpperCamelCase.
 
 ## Commentaar
