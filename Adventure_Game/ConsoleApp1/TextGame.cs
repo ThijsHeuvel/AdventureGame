@@ -102,6 +102,7 @@ namespace AdventureGame
             player.CaseID = caseID;
             Console.WriteLine(player.CaseID);
             Console.ReadKey();
+            player.HintsLeft = hintsLeft;
 
         }
     }
