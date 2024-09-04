@@ -88,7 +88,6 @@ namespace AdventureGame
         
         }
 
-        private void LoadGame()
         private void LoadGame() // This checks if the save file is valid by seeing if the first value can be a valid integer. If so, save the values to the application.
         {
             Console.Clear();
@@ -100,8 +99,6 @@ namespace AdventureGame
             }
             int hintsLeft = int.Parse(Helper.GetSaveLine(2));
             player.CaseID = caseID;
-            Console.WriteLine(player.CaseID);
-            Console.ReadKey();
             player.HintsLeft = hintsLeft;
             caseLoader.LoadCase(player.CaseID, player.HintsLeft);
         }
