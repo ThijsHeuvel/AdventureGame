@@ -84,7 +84,8 @@ namespace AdventureGame
             System.IO.StreamWriter file = new System.IO.StreamWriter("save.txt");
             file.WriteLine(player.CaseID + "\n" + player.HintsLeft);
             file.Close();
-            Helper.WaitForInput();
+            caseLoader.LoadCase(player.CaseID, player.HintsLeft);
+        
         }
 
         private void LoadGame()
