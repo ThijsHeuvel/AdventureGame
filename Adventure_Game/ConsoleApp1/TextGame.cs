@@ -125,13 +125,5 @@ namespace AdventureGame
                 return false;
             }
         }
-
-        public void SetPlayerCase(int id) // Sets the player's case. This makes it possible to change player's properties inside of CaseLoader.
-        {
-            if (player != null)
-            {
-                player.CaseID = id;
-            }
-        }
     }
 }
