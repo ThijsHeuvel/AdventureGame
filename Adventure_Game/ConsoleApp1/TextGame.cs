@@ -103,6 +103,7 @@ namespace AdventureGame
             Console.WriteLine(player.CaseID);
             Console.ReadKey();
             player.HintsLeft = hintsLeft;
+            caseLoader.LoadCase(player.CaseID, player.HintsLeft);
 
         }
     }
