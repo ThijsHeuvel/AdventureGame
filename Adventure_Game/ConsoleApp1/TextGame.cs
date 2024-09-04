@@ -104,6 +104,30 @@ namespace AdventureGame
             Console.ReadKey();
             player.HintsLeft = hintsLeft;
             caseLoader.LoadCase(player.CaseID, player.HintsLeft);
+        }
+
+        public void SaveAndQuit(int caseId, int hintsLeft) // This saves the parameters to the save file, and force quits the game with code 0.
+        {
+            Console.Clear();
+            System.IO.StreamWriter file = new System.IO.StreamWriter("save.txt");
+            file.WriteLine(caseId + "\n" + hintsLeft);
+            file.Close();
+            Helper.WaitForInput("Your progress has been saved. Thanks for playing!");
+            Environment.Exit(0);
+        }
+
+        public bool RemoveHint() // Removes a hint if possible. If not, return false
+        {
+            if (player.HintsLeft > 0)
+            {
+                player.HintsLeft = player.HintsLeft - 1;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         }
     }
