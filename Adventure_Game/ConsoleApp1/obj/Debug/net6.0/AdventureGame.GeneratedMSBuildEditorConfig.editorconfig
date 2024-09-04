@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AdventureGame
 build_property.ProjectDir = C:\Users\thijs\Desktop\Schoolbestanden\2024-2025\P_NATIVE\E1_Blokstart\AdventureGame\AdventureGame\Adventure_Game\ConsoleApp1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -26,7 +26,7 @@ namespace AdventureGame.Classes
         {
             Console.Write(question);
             string? input = Console.ReadLine();
-            int inputInt = 0;
+            int inputInt = -999;
             if (input == null || !int.TryParse(input, out inputInt))
             {
                 return inputInt;
