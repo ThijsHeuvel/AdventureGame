@@ -98,6 +98,7 @@ namespace AdventureGame
                 Console.WriteLine("Save File Invalid. Possibly corrupt?");
                 MainMenu();
             }
+            int hintsLeft = int.Parse(Helper.GetSaveLine(2));
             player.CaseID = caseID;
             Console.WriteLine(player.CaseID);
             Console.ReadKey();
