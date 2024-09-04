@@ -1,5 +1,7 @@
 ﻿
 
+using AdventureGame.Classes;
+
 namespace AdventureGame
 {
     internal class Program
