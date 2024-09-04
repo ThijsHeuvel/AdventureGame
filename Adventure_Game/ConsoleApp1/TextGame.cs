@@ -12,6 +12,12 @@ namespace AdventureGame
     {
         string? dirPath;
         Player player = new Player();
+        CaseLoader caseLoader;
+
+        public TextGame()
+        {
+            caseLoader = new CaseLoader(this);
+        }
         internal void Run() // Gets called when the program starts in Program.cs.
         {
             dirPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
