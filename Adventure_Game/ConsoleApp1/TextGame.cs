@@ -89,6 +89,7 @@ namespace AdventureGame
         }
 
         private void LoadGame()
+        private void LoadGame() // This checks if the save file is valid by seeing if the first value can be a valid integer. If so, save the values to the application.
         {
             Console.Clear();
             
